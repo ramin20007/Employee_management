@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- /* ---------------Build By Raminder Chopra----------------- */ -->
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+<!-- -----------------------GOOGLE FONTS OWSALD------------------- --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@500&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<!-- -----------------------CSS------------------- --> 
+    <link rel="stylesheet" href="..\style\style.css">
+
+<!-- -----------------------FAVICON------------------- --> 
+
+    <link rel="shortcut icon" href="..\images\favicon.ico" type="image/x-icon">
+
+    
+
+</head>
+
+<body>
+<!------------------PRE LOADER---------------------------------------->
+<div class='pre_loader'></div>
+
+<!-----------------------HEADER--------------------------------------->
+    
+    <header>
+
+        <div class = 'logo_and_search-bar'>
+<!-- -----------------------LOGO------------------- -->        
+            <div class = 'company_logo'>
+        
+                <img class = 'logo' src='..\images\company_logo.svg' alt='company logo'>
+        
+            </div>
+<!-- -----------------------Nav_BAR------------------- -->
+            <nav class = 'nav_bar'>
+        
+    
+                <div><a href='..\index.html'>Home</a></div>
+    
+                <div><a href='..\Pages\ERP.html'>Employee registration page</a></div>
+
+                <div><a href = '..\Pages\EPL.html'>Employee listing page</a></div>
+   
+               <div><a href='..\Pages\contact.html'>Contact Info</a></div>
+
+            </nav>
+ <!-- -----------------------SEARCH_BAR------------------- -->
+        <div class = 'search_bar'>
+
+            <form class = 'container_search' action=''>
+
+                <input type='text' class = 'search_bar_input' onkeyup='searchFun()' placeholder='Search bar'>
+
+                <button class = 'magnifying_glass' type='submit'><img src='..\images\magnifying_glass.png' alt='magnifying_glass_search'></button>
+
+            </form>
+
+        </div>
+
+        </div>
+
+<!-- -----------------------Nav_BAR_HAMBURGER------------------- -->
+
+            <div class = 'hamburger'>
+
+                <div class = 'line'></div>
+
+                <div class = 'line'></div>
+
+                <div class = 'line'></div>
+
+            </div>
+
+            <div class='drop_down '>
+    
+                <div><a href='..\index.html'>Home</a></div>
+    
+                <div><a href='ERP.html'>ERP</a></div>
+
+                <div><a href = 'EPL.html'>ELP</a></div>
+
+            <div><a href='contact.html'>Contact Info</a></div>
+
+        </div>
+
+<!-- ---------------------EMPLOYEE TABLE----------------------------     -->
+<div class="table-container"></div>
+
+<!-- ---------------------PAGINTAION ----------------------------     -->
+<div class="pagination-container">
+    <ul class = "pagination">
+        <li class = "prev_page"><a href="#" id = "prev">&#139;</a></li>
+        <li class = "next_page"><a href="#" id = "next">&#155;</a></li>
+    </ul>
+
+</div>
+    
+    </header>
+
+<!-----------------------FOOTER--------------------------------------->     
+    <footer style="position: absolute;">
+    
+        <p class = 'copy_right'>© Raminder Chopra</p>
+    
+        <p class = 'contact'>XXXXX XXXXX</p>
+    
+    </footer>
+    
+<!-----------------------JAVA SCRIPT TAG------------------------------>      
+<script src="..\javascript\EPL_show_Delete_search_script.js"></script>
+<script src="..\javascript\script.js"></script>
+
+
+</body>
+
+
+</html>

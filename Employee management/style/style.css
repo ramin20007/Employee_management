@@ -1,0 +1,596 @@
+*{
+font-family: Oswald;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/*<!------------------PRE LOADER----------------------------------------> */
+
+.pre_loader{
+    background: black url("../images/preloader_img.gif") no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    
+
+}
+
+/* ----------------Header----------------- */
+
+.logo_and_search-bar{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* <!-- -----------------------LOGO------------------- --> */
+.logo{
+    height: 170px;
+    width: 170px;
+    margin-left: 2%;
+    padding-top: 2%;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1190px),(max-width:768px),
+(min-device-width:768px) and (max-device-width:992px){
+    
+    .logo{
+        height: 150px;
+        width: 150px;
+    }
+
+}
+
+@media only screen and (max-width: 1190px),(max-width:768px),
+(min-device-width:768px) and (max-device-width:992px){
+    
+    .logo{
+        height: 120px;
+        width: 120px;
+    }
+
+}
+/* ---------------------SEARCH_BAR------------------ */
+
+.container_search{
+    width: 50%;
+    max-width: 500px;
+    background: black;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 2px 4px;
+    padding-top: 15%;
+    margin-bottom: 0;
+}
+
+.container_search input{
+   background: transparent; 
+   flex: 1;
+   border: 2px;
+   outline: none;
+   padding: 24px 20px;
+   font-size: 20px ;
+   color: white;
+    
+
+}
+
+::placeholder{
+    color: white;
+}
+
+.container_search button img{
+    width: 25px;
+}
+.container_search button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: black;
+    cursor: pointer;
+
+}
+
+/* ---------------------Nav_BAR------------------ */
+.nav_bar{
+    list-style: none;
+    background-color: black;
+    border-radius: 60px;
+    border: 10px;
+    border-color: aliceblue;
+    height: 10px;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 8%; 
+    margin-bottom: 0;
+    margin-left: 3%;
+
+}
+
+
+.nav_bar div a{
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+     
+}
+
+.nav_bar div a:hover{
+    background-color: wheat;
+    transition: 2s;
+}
+
+.drop_down{
+    display: none;
+    position: absolute;
+    right:1rem;
+    top: 170px;
+    height:0 ;
+    width: 150px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+
+}
+.drop_down.open{
+    height: 160px;
+}
+.drop_down a{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+    color: black;
+     
+}
+
+@media only screen and (max-width: 1190px),(max-width:768px),
+(min-device-width:768px) and (max-device-width:992px) {
+
+        
+    .nav_bar div a{
+        font-size: 10px;
+    }
+    
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        padding-left: 90%;
+    }
+    .line{
+        margin-top: 50px;
+        width: 25px;
+        height: 3px;
+        background-color:white;
+        margin: 6px;
+    }
+    .nav_bar{
+       display: none;
+    }
+    .drop_down{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1190px),(max-width:768px),
+(min-device-width:768px) and (max-device-width:992px){
+    .drop_down a{
+        font-size: 12px;
+    }
+    .drop_down{
+        width: 100px;
+    }
+}
+/* <!-----------------------TEXT - MIDDLE------------------------------>*/
+.text_middle{
+    color: wheat;
+    position: absolute;
+    top: 55%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    margin: 0;
+    padding: 0;
+    font-size: 6em;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.text_middle span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    transition:0.5s ;
+    clip-path: polygon(0 0,100% 0,100% 50% ,0 50%);
+    overflow: hidden;
+}
+
+.text_middle:hover span:nth-child(1){
+    transform: translateY(-20px);
+}
+.text_middle span:nth-child(2){
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    transition:0.5s ;
+    clip-path: polygon(0 50%,100% 50%,100% 100% ,0 100%);
+    overflow: hidden;
+}
+
+.text_middle:hover span:nth-child(2){
+    transform: translateY(20px);
+}
+
+.text_middle span:nth-child(3){
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) scaleY(0);
+    width: 91%;
+    color: black;
+    background: white;
+    font-size: 0.25em;
+    font-weight: 500;
+    letter-spacing: 0.7em;
+    text-align: center;
+    padding-left: 20px;
+    margin-left: 5px;
+    transition: 0.5s;
+}
+
+.text_middle:hover span:nth-child(3){
+    transform: translateY(-50%) scaleY(1);
+}
+
+@media only screen and (max-width: 1190px),(max-width:768px),
+(min-device-width:768px) and (max-device-width:992px){
+
+.text_middle span , .text_middle{
+    font-size:70px ;
+}
+}
+
+/* <!-----------------------RAGISTRATION PAGE------------------------------>*/
+.registration_page_header{
+    font-weight: 500px;
+    font-size: 25px;
+}
+
+.registration_page{
+    color:black;
+    min-height: 60vh;
+    text-transform: uppercase;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    max-width: 900px;
+    margin-left: 19%;
+    border-radius: 10px;
+    padding: 15px;   
+}
+.registration_page form{
+    position: relative;
+    min-height: 400px;
+    padding: 10px;
+    background-color: #FEFBF6;
+    border-radius: 10px;
+}
+.name_M,.name_F,.name_L,.position_label,.about_label,.joining_date{
+    padding: 20px;
+}
+
+.input_field_name,.input_field_position_label,.input_field_about_label,.input_field_joining_date{
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: 500px;
+    color: #000;
+}
+.input_field_name input,.input_field_position_label input,.input_field_about_label input,.input_field_joining_date input{
+    outline: none;
+    font-size: 13.5px;
+    font-weight: 400;
+    color: #000;
+    border-radius: 3px;
+    border: 2px solid black;
+}
+
+.input_field_joining_date input{
+    width: 150px;
+    height: 30px;
+}
+
+.input_field_about_label input{
+    height: 70px;
+    width: 500px;
+}
+
+.input_field_position_label input{
+    width: 500px;
+}
+
+.input_field_position_label input::placeholder,
+.input_field_about_label input::placeholder
+,.input_field_joining_date input::placeholder
+,.input_field_name input::placeholder{
+    color: #000;
+    font-size: 12px;
+     
+}
+
+.registration_page_footer{
+    position: absolute;
+}
+
+.submit_registration{
+    align-items: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 200px;
+    text-transform: uppercase;
+     
+    transition: all 0.3 linear;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1190px),(max-width:768px),
+(min-device-width:768px) and (max-device-width:992px){
+    .registration_page{
+        overflow-y: scroll;;
+    }
+    .registration_page::-webkit-scrollbar{
+       display: none;
+    }
+    .input_field_name,.input_field_position_label,.input_field_about_label,.input_field_joining_date{
+        width: calc(100%/2 - 15px);
+    }
+    .registration_page form{
+        height:50px
+    }
+    .registration_page{
+        width: calc(100%/2);
+        height:calc(100%/2);
+    }
+    .submit_registration{
+        height: calc(100%/2) ;
+        width: calc(100%/2 - 15px);
+        margin-top: 70px;
+        margin-left: 50%;
+    }
+    .input_field_about_label input{
+        height: 70px;
+        width: calc(100%/2 + 200px)
+    }
+    .input_field_position_label input{
+        width: calc(100%/2 + 200px)
+    }
+
+}
+@media only screen and (max-width:768px),
+(min-device-width:768px) and (max-device-width:992px) {
+    .input_field_name,.input_field_joining_date{
+        width: 100%;
+    }
+    .input_field_about_label input{
+        height: 70px;
+        width: calc(100%/2 + 100px)
+    }
+    .input_field_position_label input{
+        width: calc(100%/2 + 100px )
+    }
+    .submit_registration{
+        height: calc(100%/2) ;
+        width: calc(100%/2 - 15px);
+        margin-top: 90px;
+        margin-bottom: 5px;
+        margin-left: 50%;
+    }
+}
+
+/* <!-----------------------EMPLOYEE TABLE------------------------------> */
+.emplyee_table_box{
+    background-color: black;
+    height: 53vh;
+}
+@media only screen and (max-height:500px){
+    .emplyee_table_box{
+        background-color: black;
+        height: 85vh;
+    }
+}
+.table-container{
+    display: flex;
+    justify-content: center;
+    margin:20vh auto;
+    margin-top: 5vh;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+  }
+
+  table{
+    width: 100%;
+    box-shadow: 15px 15px #0000000d;
+    border-collapse: collapse;
+  }
+
+
+  th{
+    background-color: black;
+    color: #fff;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  td,th{
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+
+  .btn{
+    color: black;
+    background-color:white;
+    font-size: 13px;
+    padding: 5px 8px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  .btn:hover{
+    background-color: wheat;
+  }
+
+
+  @media only screen and (max-width:768px),
+  (min-device-width:768px) and (max-device-width:992px){
+    .table-container{
+      width:75%;
+      background: white;
+    }
+
+    table,thead,tbody,th,td,tr{
+      display: block;
+    }
+
+    thead tr{
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr{
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    td{
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+    }
+
+    td::before{
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    td:nth-of-type(1)::before{
+      content: "#";
+    }
+
+    td:nth-of-type(2)::before{
+      content: "Full Name";
+    }
+
+    td:nth-of-type(3)::before{
+      content: "Positon";
+    }
+
+    td:nth-of-type(4)::before{
+      content: "About";
+    }
+
+    td:nth-of-type(5)::before{
+      content: "Date OF Joining";
+    }
+
+    td:nth-of-type(6)::before{
+      content: "Action";
+    }
+  }
+
+/* <!-- ---------------------PAGINTAION ----------------------------     --> */
+
+.pagination-container{
+    margin:0 20vh;
+    margin-top: -19vh;
+    background-color: #fff;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination li{
+  list-style: none;
+  padding: 2px 0;
+  margin: 10px 0;
+  flex-shrink: 0;
+  text-align: center;
+  color: black;
+}
+.pagination li a{
+  text-decoration: none;
+  padding: 3px 6px;
+  color: black;
+}
+
+@media only screen and (max-width:768px),
+(min-device-width:768px) and (max-device-width:992px){
+    .pagination-container{
+        display: block;
+    }
+}
+/* ---------------Footer----------------- */
+.footer_box{
+    display: block;
+    margin-top: 60px;
+    align-items: center;
+}
+
+footer{
+    position:fixed;
+    text-align: center;
+    bottom: 3.5%;
+    width: 100%;
+    height: 60px;
+}
+
+@media only screen and (max-width:768px),
+(min-device-width:768px) and (max-device-width:992px){
+    .footer_box{
+        margin-top:170%;
+    }
+}
+
+.copy_right , .contact{
+    color: white;
+}
+
+/* ---------------Build By Raminder----------------- */
